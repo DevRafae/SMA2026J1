@@ -1,0 +1,118 @@
+:root { 
+    --verde-mc: #76b852; 
+    --verde-escuro: #4a7c2c;
+    --bg-page: #e9f5e9;
+}
+
+/* Bloqueia a seleção azul e o realce de toque */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    outline: none;
+}
+
+body { 
+    font-family: 'Segoe UI', Roboto, sans-serif; 
+    background: var(--bg-page); 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh; 
+    touch-action: none; 
+}
+
+.header {
+    width: 100%;
+    background: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.box { 
+    max-width: 420px; 
+    width: 90%;
+    background: white; 
+    padding: 20px; 
+    border-radius: 25px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+    position: relative;
+}
+
+h3 { color: var(--verde-mc); margin: 0; text-align: center; }
+.slogan { font-size: 0.85rem; color: #666; margin-bottom: 15px; font-style: italic; text-align: center; }
+
+#timer { 
+    font-weight: bold; 
+    color: white; 
+    background: var(--verde-mc); 
+    padding: 6px 20px; 
+    border-radius: 50px; 
+    display: block;
+    width: fit-content;
+    margin: 0 auto 15px auto;
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 2px; 
+    background: #cbd5e1; 
+    border: 3px solid white; 
+    border-radius: 10px;
+}
+
+.c { 
+    aspect-ratio: 1; 
+    background: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: bold; 
+    font-size: 13px; 
+    color: #334155; 
+    border-radius: 2px;
+}
+
+.c.sel { background: #dcfce7; color: var(--verde-mc); }
+.c.ok { background: var(--verde-mc) !important; color: white; }
+
+.list { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 8px; 
+    margin-top: 15px; 
+    background: #f8fafc; 
+    padding: 12px; 
+    border-radius: 15px; 
+}
+
+.item { font-size: 11px; font-weight: 600; color: #475569; text-align: left; }
+.item.ok { text-decoration: line-through; color: #cbd5e1; opacity: 0.7; }
+
+#win { 
+    display: none; 
+    position: absolute; 
+    inset: 0; 
+    background: rgba(255,255,255,0.98); 
+    border-radius: 25px; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 10; 
+}
+
+button { 
+    background: var(--verde-mc); 
+    color: white; 
+    border: none; 
+    padding: 12px 30px; 
+    border-radius: 50px; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    cursor: pointer;
+}
